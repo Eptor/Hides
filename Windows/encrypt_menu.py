@@ -1,0 +1,69 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'Designer_Files\encrypt_menu.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.2
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_encrypt_menu(object):
+    def setupUi(self, encrypt_menu):
+        encrypt_menu.setObjectName("encrypt_menu")
+        encrypt_menu.setEnabled(True)
+        encrypt_menu.resize(665, 271)
+        self.centralwidget = QtWidgets.QWidget(encrypt_menu)
+        self.centralwidget.setObjectName("centralwidget")
+        self.files_list = QtWidgets.QListWidget(self.centralwidget)
+        self.files_list.setGeometry(QtCore.QRect(10, 10, 321, 211))
+        self.files_list.setObjectName("files_list")
+        self.search_folder = QtWidgets.QPushButton(self.centralwidget)
+        self.search_folder.setGeometry(QtCore.QRect(10, 230, 321, 31))
+        self.search_folder.setObjectName("search_folder")
+        self.original_img = QtWidgets.QLineEdit(self.centralwidget)
+        self.original_img.setEnabled(True)
+        self.original_img.setGeometry(QtCore.QRect(350, 30, 221, 21))
+        self.original_img.setReadOnly(True)
+        self.original_img.setObjectName("original_img")
+        self.original_img_label = QtWidgets.QLabel(self.centralwidget)
+        self.original_img_label.setGeometry(QtCore.QRect(350, 10, 81, 16))
+        self.original_img_label.setObjectName("original_img_label")
+        self.search_image = QtWidgets.QPushButton(self.centralwidget)
+        self.search_image.setGeometry(QtCore.QRect(580, 30, 75, 23))
+        self.search_image.setObjectName("search_image")
+        self.new_name_label = QtWidgets.QLabel(self.centralwidget)
+        self.new_name_label.setGeometry(QtCore.QRect(350, 150, 111, 16))
+        self.new_name_label.setObjectName("new_name_label")
+        self.new_name = QtWidgets.QLineEdit(self.centralwidget)
+        self.new_name.setGeometry(QtCore.QRect(350, 170, 301, 21))
+        self.new_name.setObjectName("new_name")
+        self.start = QtWidgets.QPushButton(self.centralwidget)
+        self.start.setGeometry(QtCore.QRect(350, 200, 301, 61))
+        self.start.setObjectName("start")
+        self.new_location_label = QtWidgets.QLabel(self.centralwidget)
+        self.new_location_label.setGeometry(QtCore.QRect(350, 80, 101, 16))
+        self.new_location_label.setObjectName("new_location_label")
+        self.new_location = QtWidgets.QLineEdit(self.centralwidget)
+        self.new_location.setGeometry(QtCore.QRect(350, 100, 221, 21))
+        self.new_location.setObjectName("new_location")
+        self.seach_location = QtWidgets.QPushButton(self.centralwidget)
+        self.seach_location.setGeometry(QtCore.QRect(580, 100, 75, 23))
+        self.seach_location.setObjectName("seach_location")
+        encrypt_menu.setCentralWidget(self.centralwidget)
+
+        self.retranslateUi(encrypt_menu)
+        QtCore.QMetaObject.connectSlotsByName(encrypt_menu)
+
+    def retranslateUi(self, encrypt_menu):
+        _translate = QtCore.QCoreApplication.translate
+        encrypt_menu.setWindowTitle(_translate("encrypt_menu", "MainWindow"))
+        self.search_folder.setText(_translate("encrypt_menu", "Search"))
+        self.original_img_label.setText(_translate("encrypt_menu", "Original photo"))
+        self.search_image.setText(_translate("encrypt_menu", "Search"))
+        self.new_name_label.setText(_translate("encrypt_menu", "Name for the new file"))
+        self.start.setText(_translate("encrypt_menu", "START"))
+        self.new_location_label.setText(_translate("encrypt_menu", "Location for new file"))
+        self.seach_location.setText(_translate("encrypt_menu", "Search"))
