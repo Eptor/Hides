@@ -65,5 +65,7 @@ class Ui_encrypt_menu(object):
         self.search_image.setText(_translate("encrypt_menu", "Search"))
         self.new_name_label.setText(_translate("encrypt_menu", "Name for the new file"))
         self.start.setText(_translate("encrypt_menu", "START"))
-        self.new_location_label.setText(_translate("encrypt_menu", "Location for new file"))
+        self.new_location_label.setText(
+            _translate("encrypt_menu", "Location for new file")
+        )
         self.seach_location.setText(_translate("encrypt_menu", "Search"))

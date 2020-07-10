@@ -16,7 +16,8 @@ hoy = f"{dia}_{mes}_{año}"
 global file_paths
 file_paths = []
 
-def unzip(path):
+
+def unzip(path):  # Not usable for now
     with ZipFile("zip.zip", "r") as zip:
 
         # extracting all the files
@@ -40,7 +41,6 @@ def get_file_to_zip(directory):
 
 def get_file_names(directory):
 
-
     files = [file for file in file_paths]
 
     return files
@@ -62,10 +62,4 @@ def zipall(original, location, new_name):
     print(
         f"copy /b {Path(original)} + {filename} {Path(location)}.jpg && del {filename}"
     )
-    sys(
-        f"copy /b {Path(original)} + {filename} {Path(location)}.jpg && del {filename}"
-    )
-
-
-if __name__ == "__main__":
-    zipall() if int(input("> ")) == 1 else unzip()
+    sys(f"copy /b {Path(original)} + {filename} {Path(location)}.jpg && del {filename}")

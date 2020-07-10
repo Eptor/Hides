@@ -8,6 +8,7 @@ from PyQt5.QtWidgets import QMessageBox, QMainWindow
 import sys
 from pathlib import Path
 
+
 def popup(texto, titulo):
     msg = QMessageBox()
     # msg.setWindowIcon(QtGui.QIcon(icono))
@@ -30,7 +31,9 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
         self.start.clicked.connect(self.hide)
 
     def folder_lookup(self):
-        directory = str(QtWidgets.QFileDialog.getExistingDirectory(self, "Select Directory"))
+        directory = str(
+            QtWidgets.QFileDialog.getExistingDirectory(self, "Select Directory")
+        )
         files = get_file_to_zip(directory)
 
         for file in files:
@@ -41,14 +44,16 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
         self.original_img.setText(self.pic)
 
     def location(self):
-        self.directory = str(QtWidgets.QFileDialog.getExistingDirectory(self, "Select Directory"))
+        self.directory = str(
+            QtWidgets.QFileDialog.getExistingDirectory(self, "Select Directory")
+        )
         self.new_location.setText(self.directory)
 
     def hide(self):
         zipall(self.pic, self.directory, self.new_name.text())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     # app.setStyleSheet(open("style.css").read())
