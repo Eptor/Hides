@@ -46,7 +46,7 @@ y elija a dónde irá el output.
 Hector Espinoza – hector_espinoza02@hotmail.com
 
 
-### Licensia
+### Licencia
 Distribuido bajo la licensia GNU AGPLv3 license. Mira ``LICENSE`` para mas información.
 
 
