@@ -29,6 +29,7 @@ Sigue en progreso
 
 ### Ocultar
 ![](Images/encrypt.jpg)
+
 Para el Ocultado de archivos, elige el método de Ocultar en el menú, luego
 elige qué directorio quieres ocultar, elige la imagen que quieres usar como disfraz,
 elige dónde quieres guardar el output y finalmente elige un nombre para tu nueva imagen con
@@ -36,6 +37,7 @@ los archivos escondidos.
 
 ### Revelar
 ![](Images/decrypt.jpg)
+
 Para Revelar archivos, elija Revelar en el menú, luego elija qué imagen desea revelar
 y elija a dónde irá el output.
 
