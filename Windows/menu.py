@@ -11,6 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 menu_icon = "Icons/favicon.ico"
 
+
 class Ui_choose_menu(object):
     def setupUi(self, choose_menu):
         choose_menu.setObjectName("choose_menu")

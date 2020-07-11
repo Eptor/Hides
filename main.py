@@ -1,6 +1,7 @@
 from Defs.functions import *
 from Windows import menu
 
+
 class menu_class(QMainWindow, menu.Ui_choose_menu):
 
     """ Encryption window handling """
@@ -22,7 +23,8 @@ class menu_class(QMainWindow, menu.Ui_choose_menu):
         self.dec_window.show()
         self.close()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     app.setStyleSheet(open("style.css").read())

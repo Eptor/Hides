@@ -6,27 +6,21 @@ from datetime import date
 from pathlib import Path
 
 # Variables definition
-fecha_actual = date.today()
-dia = fecha_actual.strftime("%d")
-mes = fecha_actual.strftime("%m")
-año = fecha_actual.strftime("%y")
-
-hoy = f"{dia}_{mes}_{año}"
-
-global file_paths
 file_paths = []
 
 
-def unzip(path):  # Not usable for now
-    with ZipFile("zip.zip", "r") as zip:
+def unzip(path, file):  # Unzips all the files
+    with ZipFile(file, "r") as zip:
 
         # extracting all the files
-        zip.extractall(path=path)
+        zip.extractall(path=Path(path))  # Inflates the zip file on the output directory
 
 
 def get_file_to_zip(directory):
 
-    # initializing empty file paths list
+    """ Returns a list of the files in the given directory"""
+
+    global file_paths
 
     # crawling through directory and subdirectories
     for root, directories, files in os.walk(directory):
@@ -39,24 +33,23 @@ def get_file_to_zip(directory):
     return file_paths
 
 
-def get_file_names(directory):
-
-    files = [file for file in file_paths]
-
-    return files
-
-
 def zipall(filename, original, location, new_name):
-    location = f"{location}/{new_name}"
+
+    """ Generates a zip file with the selected files """
+
+    global file_paths
+
+    location = f'"{location}/{new_name}.jpg"'
+
     # writing files to a zipfile
     while True:
         with ZipFile(filename, "w") as zip:
             # writing each file one by one
-            print(file_paths)
             for file in file_paths:
                 zip.write(file)
 
             break
 
-    system(f"copy /b {Path(original)} + {filename} {Path(location)}.jpg")
-    file_paths = []
+    # Hides the zip file into the picture, creating a duplicate of said picture with the zip file inside
+    system(f"copy /b {Path(original)} + {filename} {Path(location)}")
+    file_paths = []  # Clears the list

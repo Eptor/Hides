@@ -14,6 +14,7 @@ search_zip_icon = "Icons/zip-file-search.png"
 search_folder_icon = "Icons/folder-search.png"
 terminal_icon = "Icons/terminal.png"
 
+
 class Ui_decrypt_menu(object):
     def setupUi(self, decrypt_menu):
         decrypt_menu.setObjectName("decrypt_menu")
@@ -48,6 +49,10 @@ class Ui_decrypt_menu(object):
 
     def retranslateUi(self, decrypt_menu):
         _translate = QtCore.QCoreApplication.translate
-        decrypt_menu.setWindowTitle(_translate("decrypt_menu", "Hides - The files hider"))
+        decrypt_menu.setWindowTitle(
+            _translate("decrypt_menu", "Hides - The files hider")
+        )
         self.unzip_file.setPlaceholderText(_translate("decrypt_menu", "SECRET FILE"))
-        self.output_dir.setPlaceholderText(_translate("decrypt_menu", "OUTPUT DIRECTORY"))
+        self.output_dir.setPlaceholderText(
+            _translate("decrypt_menu", "OUTPUT DIRECTORY")
+        )
