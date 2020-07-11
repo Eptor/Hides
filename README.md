@@ -1,49 +1,49 @@
 # Hides
-> The files hider.
+> El ocultador de archivos.
 
-With Hides you can hide your important files from the eyes of everyone
-by embeding them into an image in a way that you can still open the image
-like any other, but still being able to reveal said files.
+Con Hides puedes ocultar tus archivos importantes a los ojos de todos
+incrustándolos en una imagen de una manera que todavía puede abrir la imagen
+como cualquier otro, pero aún siendo capaz de revelar dichos archivos.
 
 ![](Images/menu.jpg)
 
-## Installation
+## Instalación
 
 Windows:
 
 ```
 python main.py
 ```
-or
+o
 ```
 main.py
 ```
 
 OS X & Linux:
 
-still a work in progress
+Sigue en progreso
 
-## Usage example
+## Uso
 
-### Hide / Encrypt
-For file encryption / Hiding files, choose the encryption method on the menu, then
-choose what directory you want to hide, choose the image you want to use as disguise,
-choose where you want the output to go, and finally choose a name for your new image with
-the hiden files.
+### Ocultar / Encriptar
+Para el cifrado de archivos / Ocultar archivos, elige el método de cifrado en el menú, luego
+elige qué directorio quieres ocultar, elige la imagen que quieres usar como disfraz,
+elige dónde quieres guardar el output y finalmente elige un nombre para tu nueva imagen con
+los archivos escondidos.
 
-### Reveal / Decrypt
-For file decryption / Revealing files, choose the decryption method on the menu, then
-choose what picture you want to reveal, and choose where the output will go.
+### Revelar / Descifrar
+Para descifrar archivos / Revelar archivos, elija el método de descifrado en el menú, luego
+elija qué imagen desea revelar y elija a dónde irá el output.
 
-## Author(s)
+## Autor(es)
 
 Hector Espinoza – hector_espinoza02@hotmail.com
 
 
-### License
-Distributed under the GNU AGPLv3 license. See ``LICENSE`` for more information.
+### Licensia
+Distribuido bajo la licensia GNU AGPLv3 license. Mira ``LICENSE`` para mas información.
 
 
 
-### Icons
+### Iconos
 [StreamLineIcons](https://app.streamlineicons.com/home)
