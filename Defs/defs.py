@@ -1,7 +1,6 @@
 # importing required modules
 from zipfile import ZipFile
 import os
-from os import system
 from datetime import date
 from pathlib import Path
 
@@ -46,10 +45,10 @@ def zipall(filename, original, location, new_name):
         with ZipFile(filename, "w") as zip:
             # writing each file one by one
             for file in file_paths:
-                zip.write(file)
+                zip.write(file, arcname=f"Hidden/{os.path.basename(file)}")
 
             break
 
     # Hides the zip file into the picture, creating a duplicate of said picture with the zip file inside
-    system(f"copy /b {Path(original)} + {filename} {Path(location)}")
+    os.system(f"copy /b {Path(original)} + {filename} {Path(location)}")
     file_paths = []  # Clears the list
