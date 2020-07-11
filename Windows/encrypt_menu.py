@@ -74,9 +74,7 @@ class Ui_encrypt_menu(object):
             _translate("encrypt_menu", "Hides - El ocultador de archivos")
         )
         self.original_img_label.setText(_translate("encrypt_menu", "Imagen original"))
-        self.new_name_label.setText(
-            _translate("encrypt_menu", "Nombre para el archivo nuevo")
-        )
+        self.new_name_label.setText(_translate("encrypt_menu", "Nombre del archivo"))
         self.new_location_label.setText(
-            _translate("encrypt_menu", "Localizacion del nuevo archivo")
+            _translate("encrypt_menu", "Directorio de destino")
         )
