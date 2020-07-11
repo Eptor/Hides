@@ -1,6 +1,8 @@
 # Hides
 > El ocultador de archivos.
 
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
 Con Hides puedes ocultar tus archivos importantes a los ojos de todos
 incrustándolos en una imagen de una manera que todavía puede abrir la imagen
 como cualquier otra, pero aún siendo capaz de revelar dichos archivos.
