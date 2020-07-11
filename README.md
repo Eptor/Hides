@@ -35,14 +35,16 @@ the hiden files.
 For file decryption / Revealing files, choose the decryption method on the menu, then
 choose what picture you want to reveal, and choose where the output will go.
 
-## Meta
+## Author(s)
 
 Hector Espinoza – hector_espinoza02@hotmail.com
-
-Distributed under the GNU AGPLv3 license. See ``LICENSE`` for more information.
-
 [Eptor](https://github.com/Eptor/)
 
 
+### License
+Distributed under the GNU AGPLv3 license. See ``LICENSE`` for more information.
+
+
+
 ### Icons
-[StreamLineIcons]: (https://app.streamlineicons.com/home)
+[StreamLineIcons](https://app.streamlineicons.com/home)
