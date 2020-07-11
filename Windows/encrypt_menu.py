@@ -14,6 +14,7 @@ search_folder_icon = "Icons/folder-search.png"
 original_img_icon = "Icons/image-file-search.png"
 terminal_icon = "Icons/terminal.png"
 
+
 class Ui_encrypt_menu(object):
     def setupUi(self, encrypt_menu):
         encrypt_menu.setObjectName("encrypt_menu")
@@ -69,11 +70,13 @@ class Ui_encrypt_menu(object):
 
     def retranslateUi(self, encrypt_menu):
         _translate = QtCore.QCoreApplication.translate
-        encrypt_menu.setWindowTitle(_translate("encrypt_menu", "Hides - The files hider"))
+        encrypt_menu.setWindowTitle(
+            _translate("encrypt_menu", "Hides - The files hider")
+        )
         # self.search_folder.setText(_translate("encrypt_menu", "Search"))
         self.original_img_label.setText(_translate("encrypt_menu", "Original photo"))
         self.new_name_label.setText(_translate("encrypt_menu", "Name for the new file"))
-        self.start.setText(_translate("encrypt_menu" ,"START"))
+        self.start.setText(_translate("encrypt_menu", "START"))
         self.new_location_label.setText(
             _translate("encrypt_menu", "Location for new file")
         )

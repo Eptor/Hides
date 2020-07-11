@@ -46,7 +46,7 @@ def get_file_names(directory):
     return files
 
 
-def zipall(filename ,original, location, new_name):
+def zipall(filename, original, location, new_name):
     location = f"{location}/{new_name}"
     # writing files to a zipfile
     while True:
