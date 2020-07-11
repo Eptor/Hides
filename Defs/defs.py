@@ -1,7 +1,7 @@
 # importing required modules
 from zipfile import ZipFile
 import os
-from os import system as sys
+from os import system
 from datetime import date
 from pathlib import Path
 
@@ -46,8 +46,7 @@ def get_file_names(directory):
     return files
 
 
-def zipall(original, location, new_name):
-    filename = f"{hoy}.zip"
+def zipall(filename ,original, location, new_name):
     location = f"{location}/{new_name}"
     # writing files to a zipfile
     while True:
@@ -59,7 +58,5 @@ def zipall(original, location, new_name):
 
             break
 
-    print(
-        f"copy /b {Path(original)} + {filename} {Path(location)}.jpg && del {filename}"
-    )
-    sys(f"copy /b {Path(original)} + {filename} {Path(location)}.jpg && del {filename}")
+    system(f"copy /b {Path(original)} + {filename} {Path(location)}.jpg")
+    file_paths = []
