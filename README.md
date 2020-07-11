@@ -1,6 +1,8 @@
 # Hides
 > The files hider.
 
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+
 With Hides you can hide your important files from the eyes of everyone
 by embeding them into an image in a way that you can still open the image
 like any other, but still being able to reveal said files.
