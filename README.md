@@ -27,14 +27,18 @@ still a work in progress
 
 ## Usage example
 
-### Hide / Encrypt
-For file encryption / Hiding files, choose the encryption method on the menu, then
+### Hide
+![](Images/encrypt.jpg)
+
+For hiding files, choose the Hide method on the menu, then
 choose what directory you want to hide, choose the image you want to use as disguise,
 choose where you want the output to go, and finally choose a name for your new image with
 the hiden files.
 
-### Reveal / Decrypt
-For file decryption / Revealing files, choose the decryption method on the menu, then
+### Reveal
+![](Images/decrypt.jpg)
+
+For revealing files, choose the Reveal method on the menu, then
 choose what picture you want to reveal, and choose where the output will go.
 
 ## Author(s)
@@ -43,6 +47,7 @@ Hector Espinoza – hector_espinoza02@hotmail.com
 
 
 ### License
+
 Distributed under the GNU AGPLv3 license. See ``LICENSE`` for more information.
 
 
