@@ -1,4 +1,4 @@
-#centralwidget, QListWidget
+#centralwidget, QListWidget, QMessageBox
 {
     background-color: #161416;
     color: white;
@@ -11,12 +11,17 @@ QLabel
 
 QPushButton, QListWidget
 {
-    border-radius: 15px 15px 15px 15px;
-    border: 1px dashed #ffffff;
+    border-radius: 3px;
+    border: 2px solid #ffffff;
+    color: white;
+}
+
+Ok
+{
+    min-width: 50px;
 }
 
 QPushButton:hover
 {
-    border-radius: 15px 15px 15px 15px;
-    border: 1px solid #ffffff;
+    border-radius: 10px;
 }
