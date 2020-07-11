@@ -4,7 +4,7 @@ from Windows import menu
 
 class menu_class(QMainWindow, menu.Ui_choose_menu):
 
-    """ Encryption window handling """
+    """ Manejo de la ventana del menu """
 
     def __init__(self, *args, **kwargs):
         QMainWindow.__init__(self, *args, **kwargs)

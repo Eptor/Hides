@@ -50,9 +50,9 @@ class Ui_decrypt_menu(object):
     def retranslateUi(self, decrypt_menu):
         _translate = QtCore.QCoreApplication.translate
         decrypt_menu.setWindowTitle(
-            _translate("decrypt_menu", "Hides - The files hider")
+            _translate("decrypt_menu", "Hides - El ocultador de archivos")
         )
-        self.unzip_file.setPlaceholderText(_translate("decrypt_menu", "SECRET FILE"))
+        self.unzip_file.setPlaceholderText(_translate("decrypt_menu", "Archivo secreto"))
         self.output_dir.setPlaceholderText(
-            _translate("decrypt_menu", "OUTPUT DIRECTORY")
+            _translate("decrypt_menu", "Folder destino")
         )

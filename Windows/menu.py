@@ -33,5 +33,5 @@ class Ui_choose_menu(object):
     def retranslateUi(self, choose_menu):
         _translate = QtCore.QCoreApplication.translate
         choose_menu.setWindowTitle(_translate("choose_menu", "Hides"))
-        self.encrypt_button.setText(_translate("choose_menu", "Encrypt"))
-        self.decrypt_button.setText(_translate("choose_menu", "Decrypt"))
+        self.encrypt_button.setText(_translate("choose_menu", "Ocultar"))
+        self.decrypt_button.setText(_translate("choose_menu", "Revelar"))

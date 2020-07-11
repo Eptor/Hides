@@ -49,7 +49,7 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
     def folder_lookup(self):
         """ Gets the path and the files of the directory to hide """
         directory = str(
-            QtWidgets.QFileDialog.getExistingDirectory(self, "Select Directory")
+            QtWidgets.QFileDialog.getExistingDirectory(self, "Selecciona un directorio")
         )
 
         files = get_file_to_zip(directory)
@@ -59,13 +59,13 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
 
     def original(self):
         """ Gets the path for the photo used to hide the files """
-        self.pic = QtWidgets.QFileDialog.getOpenFileName(self, "Select image")[0]
+        self.pic = QtWidgets.QFileDialog.getOpenFileName(self, "Selecciona la imagen")[0]
         self.original_img.setText(self.pic)
 
     def location(self):
         """ Gets the output directory for the picture with the hiden files"""
         self.directory = str(
-            QtWidgets.QFileDialog.getExistingDirectory(self, "Select Directory")
+            QtWidgets.QFileDialog.getExistingDirectory(self, "Selecciona un directorio")
         )
         self.new_location.setText(self.directory)
 
@@ -75,8 +75,8 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
             # Shows the popup indicating you have to wait
             popup(
                 wait_zip,
-                "Your window will freeze while the files are being hiden, everything is ok.",
-                "Starting",
+                "Tu ventana se congelará por un instante mientras\nse ocultan tus archivos",
+                "Empezando.",
             )
 
             # Makes a zip file with all the files choosen by the user
@@ -84,11 +84,11 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
 
         except Exception as ಠ_ಠ:
             # In case of failure, notify it
-            popup(error_zip, "The process failed, we are deleting the zip.", "Error")
+            popup(error_zip, "El proceso falló, eliminando zip.", "Error")
 
         else:
             # In case of no flaws, notify it
-            popup(ok_zip, "Files successfully hiden.", "Complete")
+            popup(ok_zip, "Archivos ocultos correctamente.", "Completado")
 
         finally:
             # Clear the list and delete the generated zip file
@@ -110,27 +110,29 @@ class decrypt_class(QMainWindow, decrypt_menu.Ui_decrypt_menu):
         self.start.clicked.connect(self.reveal)
 
     def file(self):
-        self.pic = QtWidgets.QFileDialog.getOpenFileName(self, "Select image")[0]
+        self.pic = QtWidgets.QFileDialog.getOpenFileName(self, "Selecciona la imagen")[0]
 
         self.unzip_file.setText(self.pic)
 
     def output(self):
         self.output = str(
-            QtWidgets.QFileDialog.getExistingDirectory(self, "Select Directory")
+            QtWidgets.QFileDialog.getExistingDirectory(self, "Selecciona un directorio")
         )
 
         self.output_dir.setText(self.output)
 
     def reveal(self):
         try:
+            # Shows the popup indicating you have to wait
             popup(
                 wait_zip,
-                "Your window will freeze while the files are being revealed, everything is ok.",
-                "Starting",
+                "Tu ventana se congelará por un instante mientras\nse ocultan tus archivos",
+                "Empezando.",
             )
 
             unzip(self.output, self.pic)
         except Exception as ಠ_ಠ:
-            popup(error_zip, "An error has ocurred.", "Error")
+            # In case of failure, notify it
+            popup(error_zip, "El proceso falló, eliminando zip.", "Error")
         else:
-            popup(ok_zip, "successfully revealed files.", "Complete")
+            popup(ok_zip, "Archivos revelados satisfactoriamente.", "Completado")
