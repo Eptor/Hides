@@ -38,7 +38,7 @@ choose what picture you want to reveal, and choose where the output will go.
 ## Author(s)
 
 Hector Espinoza – hector_espinoza02@hotmail.com
-[Eptor](https://github.com/Eptor/)
+[Github User](https://github.com/Eptor/)
 
 
 ### License
