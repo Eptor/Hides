@@ -24,7 +24,11 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Icons/zip-file-search.png</normaloff>../Icons/zip-file-search.png</iconset>
     </property>
    </widget>
    <widget class="QLineEdit" name="unzip_file">
@@ -40,7 +44,7 @@
      <bool>true</bool>
     </property>
     <property name="placeholderText">
-     <string>SECRET FILE</string>
+     <string>Secret File</string>
     </property>
    </widget>
    <widget class="QPushButton" name="output_dir_search">
@@ -53,7 +57,11 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Icons/folder-search.png</normaloff>../Icons/folder-search.png</iconset>
     </property>
    </widget>
    <widget class="QLineEdit" name="output_dir">
@@ -69,7 +77,7 @@
      <bool>true</bool>
     </property>
     <property name="placeholderText">
-     <string>OUTPUT DIRECTORY</string>
+     <string>Output directory</string>
     </property>
    </widget>
    <widget class="QPushButton" name="start">
@@ -82,7 +90,11 @@
      </rect>
     </property>
     <property name="text">
-     <string>PushButton</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Icons/terminal.png</normaloff>../Icons/terminal.png</iconset>
     </property>
    </widget>
   </widget>

@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Hides - The files hider</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QListWidget" name="files_list">
@@ -37,7 +37,11 @@
      </rect>
     </property>
     <property name="text">
-     <string>Search</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Icons/folder-search.png</normaloff>../Icons/folder-search.png</iconset>
     </property>
    </widget>
    <widget class="QLineEdit" name="original_img">
@@ -79,7 +83,11 @@
      </rect>
     </property>
     <property name="text">
-     <string>Search</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Icons/image-file-search.png</normaloff>../Icons/image-file-search.png</iconset>
     </property>
    </widget>
    <widget class="QLabel" name="new_name_label">
@@ -121,7 +129,11 @@
      </rect>
     </property>
     <property name="text">
-     <string>START</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Icons/terminal.png</normaloff>../Icons/terminal.png</iconset>
     </property>
    </widget>
    <widget class="QLabel" name="new_location_label">
@@ -153,7 +165,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="seach_location">
+   <widget class="QPushButton" name="search_location">
     <property name="geometry">
      <rect>
       <x>580</x>
@@ -163,7 +175,11 @@
      </rect>
     </property>
     <property name="text">
-     <string>Search</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../Icons/folder-search.png</normaloff>../Icons/folder-search.png</iconset>
     </property>
    </widget>
   </widget>
