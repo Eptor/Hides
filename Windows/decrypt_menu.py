@@ -52,7 +52,7 @@ class Ui_decrypt_menu(object):
         decrypt_menu.setWindowTitle(
             _translate("decrypt_menu", "Hides - El ocultador de archivos")
         )
-        self.unzip_file.setPlaceholderText(_translate("decrypt_menu", "Archivo secreto"))
-        self.output_dir.setPlaceholderText(
-            _translate("decrypt_menu", "Folder destino")
+        self.unzip_file.setPlaceholderText(
+            _translate("decrypt_menu", "Archivo secreto")
         )
+        self.output_dir.setPlaceholderText(_translate("decrypt_menu", "Folder destino"))

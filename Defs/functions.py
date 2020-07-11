@@ -59,7 +59,9 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
 
     def original(self):
         """ Gets the path for the photo used to hide the files """
-        self.pic = QtWidgets.QFileDialog.getOpenFileName(self, "Selecciona la imagen")[0]
+        self.pic = QtWidgets.QFileDialog.getOpenFileName(self, "Selecciona la imagen")[
+            0
+        ]
         self.original_img.setText(self.pic)
 
     def location(self):
@@ -110,7 +112,9 @@ class decrypt_class(QMainWindow, decrypt_menu.Ui_decrypt_menu):
         self.start.clicked.connect(self.reveal)
 
     def file(self):
-        self.pic = QtWidgets.QFileDialog.getOpenFileName(self, "Selecciona la imagen")[0]
+        self.pic = QtWidgets.QFileDialog.getOpenFileName(self, "Selecciona la imagen")[
+            0
+        ]
 
         self.unzip_file.setText(self.pic)
 
