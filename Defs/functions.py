@@ -55,7 +55,9 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
         files = get_file_to_zip(directory)
 
         for file in files:
-            self.files_list.addItem(str(Path(file)))  # Adds the files to the list
+            self.files_list.addItem(
+                str(path.basename(file))
+            )  # Adds the files to the list
 
     def original(self):
         """ Gets the path for the photo used to hide the files """
@@ -87,6 +89,7 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
         except Exception as ಠ_ಠ:
             # In case of failure, notify it
             popup(error_zip, "El proceso falló, eliminando zip.", "Error")
+            print(ಠ_ಠ)
 
         else:
             # In case of no flaws, notify it
