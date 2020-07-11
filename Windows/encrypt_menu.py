@@ -76,7 +76,6 @@ class Ui_encrypt_menu(object):
         # self.search_folder.setText(_translate("encrypt_menu", "Search"))
         self.original_img_label.setText(_translate("encrypt_menu", "Original photo"))
         self.new_name_label.setText(_translate("encrypt_menu", "Name for the new file"))
-        self.start.setText(_translate("encrypt_menu", "START"))
         self.new_location_label.setText(
             _translate("encrypt_menu", "Location for new file")
         )
