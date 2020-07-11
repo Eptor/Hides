@@ -47,7 +47,7 @@ Hector Espinoza – hector_espinoza02@hotmail.com
 
 
 ### Licencia
-Distribuido bajo la licensia GNU AGPLv3 license. Mira ``LICENSE`` para mas información.
+Distribuido bajo la licencia GNU AGPLv3. Mira ``LICENSE`` para mas información.
 
 
 
