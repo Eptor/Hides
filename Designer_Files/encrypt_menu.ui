@@ -16,6 +16,10 @@
   <property name="windowTitle">
    <string>Hides - El ocultador de archivos</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Icons/favicon.ico</normaloff>../Icons/favicon.ico</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QListWidget" name="files_list">
     <property name="geometry">
@@ -94,7 +98,7 @@
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>150</y>
+      <y>110</y>
       <width>221</width>
       <height>16</height>
      </rect>
@@ -110,7 +114,7 @@
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>170</y>
+      <y>130</y>
       <width>301</width>
       <height>21</height>
      </rect>
@@ -140,13 +144,13 @@
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>80</y>
+      <y>60</y>
       <width>221</width>
       <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Directorio de destion</string>
+     <string>Directorio de destino</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="new_location">
@@ -156,7 +160,7 @@
     <property name="geometry">
      <rect>
       <x>350</x>
-      <y>100</y>
+      <y>80</y>
       <width>221</width>
       <height>21</height>
      </rect>
@@ -169,7 +173,7 @@
     <property name="geometry">
      <rect>
       <x>580</x>
-      <y>100</y>
+      <y>80</y>
       <width>75</width>
       <height>23</height>
      </rect>
@@ -180,6 +184,19 @@
     <property name="icon">
      <iconset>
       <normaloff>../Icons/folder-search.png</normaloff>../Icons/folder-search.png</iconset>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="encrypt">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>170</y>
+      <width>70</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Encriptar</string>
     </property>
    </widget>
   </widget>

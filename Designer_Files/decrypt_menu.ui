@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Hides - El ocultador de archivos</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Icons/favicon.ico</normaloff>../Icons/favicon.ico</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="unzip_file_search">
     <property name="geometry">
@@ -85,7 +89,7 @@
      <rect>
       <x>10</x>
       <y>80</y>
-      <width>621</width>
+      <width>511</width>
       <height>41</height>
      </rect>
     </property>
@@ -95,6 +99,19 @@
     <property name="icon">
      <iconset>
       <normaloff>../Icons/terminal.png</normaloff>../Icons/terminal.png</iconset>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="decrypt">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>90</y>
+      <width>91</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Desencriptar</string>
     </property>
    </widget>
   </widget>

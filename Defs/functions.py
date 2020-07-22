@@ -49,7 +49,9 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
     def folder_lookup(self):
         """ Gets the path and the files of the directory to hide """
         directory = str(
-            QtWidgets.QFileDialog.getExistingDirectory(self, "Selecciona un directorio")
+            QtWidgets.QFileDialog.getExistingDirectory(
+                self, "Selecciona un directorio"
+            )
         )
 
         files = get_file_to_zip(directory)
@@ -61,15 +63,17 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
 
     def original(self):
         """ Gets the path for the photo used to hide the files """
-        self.pic = QtWidgets.QFileDialog.getOpenFileName(self, "Selecciona la imagen")[
-            0
-        ]
+        self.pic = QtWidgets.QFileDialog.getOpenFileName(
+            self, "Selecciona la imagen"
+        )[0]
         self.original_img.setText(self.pic)
 
     def location(self):
         """ Gets the output directory for the picture with the hiden files"""
         self.directory = str(
-            QtWidgets.QFileDialog.getExistingDirectory(self, "Selecciona un directorio")
+            QtWidgets.QFileDialog.getExistingDirectory(
+                self, "Selecciona un directorio"
+            )
         )
         self.new_location.setText(self.directory)
 
@@ -84,7 +88,13 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
             )
 
             # Makes a zip file with all the files choosen by the user
-            zipall(filename, self.pic, self.directory, self.new_name.text())
+            file_2_list = zipall(
+                True if self.encrypt.isChecked else False,
+                filename,
+                self.pic,
+                self.directory,
+                self.new_name.text(),
+            )
 
         except Exception as ಠ_ಠ:
             # In case of failure, notify it
@@ -93,13 +103,21 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
 
         else:
             # In case of no flaws, notify it
-            popup(ok_zip, "Archivos ocultos correctamente.", "Completado")
+            popup(
+                ok_zip,
+                "Archivos ocultos correctamente,\nEspera mientras eliminamos los residuos",
+                "Completado",
+            )
 
         finally:
+            for file in file_2_list:
+                os.system(f'del "{Path(file)}"')
+
             # Clear the list and delete the generated zip file
             self.files_list.clear()
-            if path.isfile(filename):
-                system(f"del {filename}")
+            self.original_img.setText("")
+            self.new_location.setText("")
+            self.new_name.setText("")
 
 
 class decrypt_class(QMainWindow, decrypt_menu.Ui_decrypt_menu):
@@ -115,15 +133,17 @@ class decrypt_class(QMainWindow, decrypt_menu.Ui_decrypt_menu):
         self.start.clicked.connect(self.reveal)
 
     def file(self):
-        self.pic = QtWidgets.QFileDialog.getOpenFileName(self, "Selecciona la imagen")[
-            0
-        ]
+        self.pic = QtWidgets.QFileDialog.getOpenFileName(
+            self, "Selecciona la imagen"
+        )[0]
 
         self.unzip_file.setText(self.pic)
 
     def output(self):
         self.output = str(
-            QtWidgets.QFileDialog.getExistingDirectory(self, "Selecciona un directorio")
+            QtWidgets.QFileDialog.getExistingDirectory(
+                self, "Selecciona un directorio"
+            )
         )
 
         self.output_dir.setText(self.output)
@@ -137,9 +157,17 @@ class decrypt_class(QMainWindow, decrypt_menu.Ui_decrypt_menu):
                 "Empezando.",
             )
 
-            unzip(self.output, self.pic)
+            unzip(
+                True if self.decrypt.isChecked else False,
+                self.output,
+                self.pic,
+            )
+
         except Exception as ಠ_ಠ:
             # In case of failure, notify it
-            popup(error_zip, "El proceso falló, eliminando zip.", "Error")
+            popup(error_zip, "El proceso falló, abortando.", "Error")
+            print(ಠ_ಠ)
         else:
-            popup(ok_zip, "Archivos revelados satisfactoriamente.", "Completado")
+            popup(
+                ok_zip, "Archivos revelados satisfactoriamente.", "Completado"
+            )
