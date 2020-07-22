@@ -56,32 +56,23 @@ def zipall(encryption, filename, original, location, new_name):
     file_2_list = []
 
     # writing files to a zipfile
-    while True:
-        with ZipFile(filename, "w", ZIP_DEFLATED) as zip:
-            # writing each file one by one
-            for file in file_paths:
-                if encryption:
-                    from Defs.crypto import encrypt
+    with ZipFile(filename, "w", ZIP_DEFLATED) as zip:
+        # writing each file one by one
+        for file in file_paths:
+            if encryption:
+                from Defs.crypto import encrypt
 
-                    file_2 = encrypt(file, "foo")
-                    zip.write(
-                        file_2, arcname=f"Hidden/{os.path.basename(file_2)}"
-                    )
-                    file_2_list.append(Path(file_2))
-                else:
-                    zip.write(file, arcname=f"Hidden/{os.path.basename(file)}")
-
-            break
+                file_2 = encrypt(file, "foo")
+                zip.write(file_2, arcname=f"Hidden/{os.path.basename(file_2)}")
+                file_2_list.append(Path(file_2))
+            else:
+                zip.write(file, arcname=f"Hidden/{os.path.basename(file)}")
+                file_2_list.append(Path(file))
 
     # Hides the zip file into the picture, creating a duplicate of said picture with the zip file inside
-    if encrypt:
-        os.system(
-            f'copy /b {Path(original)} + {Path(filename)} "{pic_location}" && del {Path(filename)}'
-        )
-    else:
-        os.system(
-            f'copy /b {Path(original)} + {Path(filename)} "{pic_location}" && del {Path(filename)}'
-        )
+    os.system(
+        f'copy /b {Path(original)} + {Path(filename)} "{pic_location}" && del {Path(filename)}'
+    )
 
     file_paths = []  # Clears the lis
 

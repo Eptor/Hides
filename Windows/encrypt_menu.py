@@ -92,6 +92,7 @@ class Ui_encrypt_menu(object):
         self.encrypt = QtWidgets.QCheckBox(self.centralwidget)
         self.encrypt.setGeometry(QtCore.QRect(470, 170, 70, 17))
         self.encrypt.setObjectName("encrypt")
+        self.encrypt.setChecked(False)
         encrypt_menu.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(encrypt_menu)

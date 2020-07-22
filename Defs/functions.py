@@ -83,13 +83,13 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
             # Shows the popup indicating you have to wait
             popup(
                 wait_zip,
-                "Tu ventana se congelará por un instante mientras\nse ocultan tus archivos",
+                "Tu ventana se congelará por un instante mientras\nse ocultan tus archivos. Si escogiste la opcion de encriptar, es posible\nque tarde un poco mas de lo esperado.",
                 "Empezando.",
             )
 
             # Makes a zip file with all the files choosen by the user
             file_2_list = zipall(
-                True if self.encrypt.isChecked else False,
+                True if self.encrypt.isChecked() else False,
                 filename,
                 self.pic,
                 self.directory,
@@ -98,7 +98,7 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
 
         except Exception as ಠ_ಠ:
             # In case of failure, notify it
-            popup(error_zip, "El proceso falló, eliminando zip.", "Error")
+            popup(error_zip, "El proceso falló.", "Error")
             print(ಠ_ಠ)
 
         else:
@@ -110,14 +110,16 @@ class encrypt_class(QMainWindow, encrypt_menu.Ui_encrypt_menu):
             )
 
         finally:
-            for file in file_2_list:
-                os.system(f'del "{Path(file)}"')
+            if self.encrypt.isChecked():
+                for file in file_2_list:
+                    os.system(f'del "{Path(file)}"')
 
             # Clear the list and delete the generated zip file
             self.files_list.clear()
             self.original_img.setText("")
             self.new_location.setText("")
             self.new_name.setText("")
+            self.encrypt.setChecked(False)
 
 
 class decrypt_class(QMainWindow, decrypt_menu.Ui_decrypt_menu):
@@ -158,7 +160,7 @@ class decrypt_class(QMainWindow, decrypt_menu.Ui_decrypt_menu):
             )
 
             unzip(
-                True if self.decrypt.isChecked else False,
+                True if self.decrypt.isChecked() else False,
                 self.output,
                 self.pic,
             )
